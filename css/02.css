@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+h1 {
+  font-size: 34px;
+  color: #ca6ccf;
+  font-family: "Nanum Pen Script", cursive;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  /* overflow-y: hidden; */
+}
+
+/* html {
+  width: 100vw;
+  height: 100vh;
+} */
+body {
+  width: 98vw;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gra {
+  0% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(3) rotate(0.5turn);
+  }
+  100% {
+    transform: scale(3) rotate(1turn);
+  }
+}
+.gra {
+  z-index: -1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* SCSS에서 flex속성 4가지 mixin으로 쓸 수 있지 않을까?? */
+
+  /* background: linear-gradient(30deg, #ca6ccf, #fabb33); */
+  background: linear-gradient(30deg, #ffab91, #edfbd1, #d0a3d6);
+
+  animation: gra 10s ease-in-out infinite;
+}
+
+.view {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(248, 255, 240);
+  border: #ca6ccf solid 2px;
+  border-top: #ca6ccf solid 24px;
+  border-radius: 24px;
+  position: relative;
+}
+
+.img {
+  width: 320px;
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -14px;
+  border-radius: 6px;
+}
+.view2_img {
+  background-image: url(/images/수국프릴\ 특판.jpg);
+  /* border: #fabb33 solid 2px; */
+}
+
+.view_line {
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 14px;
+  background-color: #fabb33;
+  position: relative;
+}
+
+/*button::after {
+  content: "";
+  display: inline-block;
+  width: 120%;
+  height: 120%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4;
+  background-color: rgb(155, 42, 42);
+}
+button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}*/
+
+/* span {
+  z-index: 10;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+} */
